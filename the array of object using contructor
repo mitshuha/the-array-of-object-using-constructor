@@ -1,0 +1,45 @@
+package dsa;
+// creatikng student class
+ class student{
+     public int roll_number;
+     public String name;
+     public  String branch;
+     public  char section;
+     public  String blood_group;
+      // this is contructor
+      student(int roll_number,String name,String branch,char section,String blood_group){
+          this.roll_number=roll_number;
+          this.name=name;
+          this.branch=branch;
+          this.section=section;
+          this.blood_group=blood_group;
+
+
+      }
+      // this is method for printing the data of a student
+    void printdata(){
+        System.out.println("the roll_number is"+" :"+roll_number);
+        System.out.println("the name is "+" :"+name);
+        System.out.println("the branch is"+" :"+branch);
+        System.out.println("the section is "+" :"+section);
+        System.out.println("blood group is"+" :"+blood_group);
+    }
+ }
+public class array_of_object {
+    public static void main(String[] args) {
+        student s1[];
+        s1=new student[3];
+        s1[0]=new student(101,"pranay","CSE",'C',"AB+");
+        s1[1]=new student(102,"atharva","CSE",'A',"O+");
+        s1[2]=new student(103,"ankush","ME",'A',"O+");
+
+
+        // calling the print_data fungtion
+        // using a loop here
+        for (int i=0;i<3;i++){
+            s1[i].printdata();
+            System.out.println();
+        }
+
+    }
+}
